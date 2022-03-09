@@ -216,9 +216,18 @@ namespace SMS.Test
             // TBC - complete this method
             // arrange
            
+           var s = svc.AddStudent("Clare", "Computing", "clare@gmail.com", 21, 0, "");
+           
             // act
+
+            var t = svc.CreateTicket(s.Id,"An issue");
            
             // assert
+            Assert.NotNull(t);
+            Assert.Equal(s.Id, t.StudentId);
+            Assert.Equal("An issue", t.Issue);
+            Assert.True(t.Active);
+
           
         }
 
