@@ -25,6 +25,23 @@
     <div class="mt-4">
         <!-- TBC -->
         <!-- add a form with hidden input storing the ticket id as Id and a   -->
+
+        <
+ <div class ="card rounded shadow p-3">
+    <form asp-action ="TicketDelete">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <input type ="hidden" asp-for="StudentId">
+
+        <input type = "hidden" asp-for="Id">
+
+        <div class="mt-3">
+            <input type="Delete" value= "DeleteConfirm" class = "btn btn-primary"/>
+            <a class ="btn btn-secondary" asp-action ="Details" asp-route-id="@Model.Student"></a>
+        </div>
+
+     </form>
+ </div>
         <!-- second hidden input field containing the student id as StudentId -->
         <!-- the form asp-action should call TicketDeleteConfirm              -->
     </div>

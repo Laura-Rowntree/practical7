@@ -18,6 +18,7 @@
                     <td>@t.Active</td>
                     <td>
                        <!-- TBC - add an anchor tag styled as a small danger button that navigates  -->
+                       <a asp-controller="Student" asp-action="TicketDelete" asp-route-id="@Model.Id" class="btn btn-sm btn-danger">Delete</a>
                        <!-- to the TicketDelete action. Remember to pass the asp-route-id parameter -->
                     </td>             
                 </tr>   
